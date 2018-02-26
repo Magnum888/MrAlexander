@@ -58,21 +58,13 @@
 				currentLink.removeClass("navactive");
 			}
 		});
-	
-       
-        $(function(){
-            $('#portfolio').mixitup({
-                targetSelector: '.item',
-                transitionSpeed: 350
-            });
-        });
 
-          $(function() {
-            $( "#datepicker" ).datepicker();
-        });
+        //   $(function() {
+        //     $( "#datepicker" ).datepicker();
+        // });
     
     };
-	
+    
     // $(document).ready(function () {
     //     $("#contact-us").submit(function () {
     //         $.ajax({

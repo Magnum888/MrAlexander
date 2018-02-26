@@ -20,9 +20,9 @@
 #filter-list li {
 	font-weight: bold;
 	color:black !important;
-  display: inline-block;
-  width: auto;
-  padding: 6px 10px;
+  	display: inline-block;
+ 	width: auto;
+  	padding: 6px 10px;
 	margin-right: 15px;
 	font-size: 1.2em;
 	cursor: pointer;
@@ -44,9 +44,9 @@
 /** portfolio list **/
 #portfolio {
 	display: block;
-  width: 100%;
-  padding: 0 12px;
-  margin-bottom: 0;
+  	width: 100%;
+ 	padding: 0 12px;
+  	margin-bottom: 0;
 	text-align: center;
 }
 
@@ -93,10 +93,10 @@
 }
 
 @media (min-width: 991px) {
-	#portfolio .item:nth-child(5),
-	#portfolio .item:nth-child(6),
-	#portfolio .item:nth-child(7),
-	#portfolio .item:nth-child(8) {
+	#portfolio .mix:nth-child(5),
+	#portfolio .mix:nth-child(6),
+	#portfolio .mix:nth-child(7),
+	#portfolio .mix:nth-child(8) {
 		margin-bottom: 0;
 	}
 }
