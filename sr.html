@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <style>
+        /*
+
+Step 1
+======
+
+Style your page (the product list)
+
+*/
+
+        .product {
+            float: left;
+            margin: 10px;
+        }
+
+        .product .product-images,
+        .product .product-form {
+            display: none;
+        }
+
+        /*
+
+        Step 2
+        ======
+
+        Reposition and redesign fancyBox blocks
+
+        */
+
+        /* This elements contains both blocks */
+        .fancybox-inner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            max-width: 800px;
+            max-height: 600px;
+        }
+
+        /* Left block will contain the gallery */
+        .fancybox-stage {
+            width: 52%;
+            background: #fff;
+        }
+
+        /* Right block - close button and the form */
+        .fancybox-form-wrap {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 40px;
+            width: 48%;
+            background: #fff;
+        }
+
+        /* Add vertical lines */
+        .fancybox-form-wrap::before,
+        .fancybox-form-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        .fancybox-form-wrap::before {
+            width: 8px;
+            background: #f4f4f4;
+        }
+
+        .fancybox-form-wrap::after {
+            width: 1px;
+            background: #e9e9e9;
+        }
+
+        /* Set position and colors for close button */
+        .fancybox-button--close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #F0F0F0;
+            color: #222;
+            padding: 7px;
+        }
+
+        .fancybox-button:hover {
+            color: #111;
+            background: #e4e4e4;
+        }
+
+        .fancybox-button svg path {
+            stroke-width: 1;
+        }
+
+        /* Set position of the form */
+        .fancybox-inner .product-form {
+            overflow: auto;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            bottom: 50px;
+            left: 0;
+            padding: 0 50px;
+            text-align: center;
+        }
+
+
+        /*
+
+        Step 3
+        ======
+
+        Tweak fade animation
+
+        */
+
+        .fancybox-inner {
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .fancybox-is-open .fancybox-inner {
+            opacity: 1;
+        }
+
+        .fancybox-is-closing .fancybox-fx-fade {
+            opacity: 1 !important; /* Prevent double-fading */
+        }
+
+        /*
+
+        Step 2
+        ======
+
+        Bullet navigation design
+
+        */
+        .product-bullets {
+            list-style: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            z-index: 99999;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+
+        .product-bullets li {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .product-bullets li a {
+            display: block;
+            height: 30px;
+            width: 20px;
+            position: relative;
+        }
+
+        .product-bullets li a span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 99px;
+            text-indent: -99999px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+        }
+
+        .product-bullets li.active a span {
+            background: #FF6666;
+        }
+    </style>
+</head>
+<body>
+<h2>fancyBox v3.2 - Quick product view</h2>
+
+<div class="product">
+    <a href="https://source.unsplash.com/fZ8uf_L52wg/832x1200" data-fancybox="quick-view-1" data-type="image">
+        <img src="https://source.unsplash.com/fZ8uf_L52wg/208x300" />
+    </a>
+    
+    <!--<div class="product-images">-->
+        <!--<a href="https://source.unsplash.com/xulIYVIbYIc/832x1200" data-fancybox="quick-view-1" data-type="image"></a>-->
+
+        <!--<a href="https://source.unsplash.com/-oSpTrUtvfY/832x1200" data-fancybox="quick-view-1" data-type="image"></a>-->
+    <!--</div>-->
+    <div class="product-form">
+        <h3>Cat pictures</h3>
+        <p>
+            Discover cat pictures that fit for your visual content needs.
+        </p>
+
+        <p>
+            These cat photos feature cats of all sizes, including baby kittens. You'll not only find cat images of common house felines but also rarer breeds.
+        </p>
+        <p><button class="btn" data-fancybox-close>Add to cart</button></p>
+    </div>
+</div>
+
+<div class="product">
+    <a href="https://source.unsplash.com/mx0DEnfYxic/832x1200" data-fancybox="quick-view-2" data-type="image">
+        <img src="https://source.unsplash.com/mx0DEnfYxic/208x300" />
+    </a>
+
+    <div class="product-images">
+        <a href="https://source.unsplash.com/AbNO2iejoXA/832x1200" data-fancybox="quick-view-2" data-type="image"></a>
+
+        <a href="https://source.unsplash.com/CdK2eYhWfQ0/832x1200" data-fancybox="quick-view-2" data-type="image"></a>
+    </div>
+    <div class="product-form">
+        <h3>Dog pictures</h3>
+        <p>
+            Find dog photos featuring all different kinds of canines and man's best friend. Some of the many breeds showcased in the dog pictures below include bull dogs, huskies, labradors, poodles, and retrievers.
+        </p>
+        <p><button class="btn" data-fancybox-close>Add to cart</button></p>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+<script>
+    $('[data-fancybox^="quick-view"]').fancybox({
+        animationEffect   : "fade",
+        animationDuration : 300,
+        margin : 0,
+        gutter : 0,
+        touch  : {
+            vertical: false
+        },
+        baseTpl	:
+        '<div class="fancybox-container" role="dialog" tabindex="-1">' +
+        '<div class="fancybox-bg"></div>' +
+        '<div class="fancybox-inner">' +
+        '<div class="fancybox-stage"></div>' +
+        '<div class="fancybox-form-wrap">' +
+        '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}">' +
+        '<svg viewBox="0 0 40 40">' +
+        '<path d="M10,10 L30,30 M30,10 L10,30" />' +
+        '</svg>' +
+        '</button></div>' +
+        '</div>' +
+        '</div>',
+        onInit: function(instance) {
+
+            /*
+
+             #1 Add product form
+             ===================
+
+             */
+
+            // Find current form element ..
+            var current = instance.group[instance.currIndex];
+            instance.$refs.form = current.opts.$orig.parent().find('.product-form');
+
+            // .. and move to the container
+            instance.$refs.form.appendTo( instance.$refs.container.find('.fancybox-form-wrap') );
+
+            /*
+
+             #2 Create bullet navigation links
+             =================================
+
+             */
+            var list = '',
+                $bullets;
+
+            for ( var i = 0; i < instance.group.length; i++ ) {
+                list += '<li><a data-index="' + i + '" href="javascript:;"><span>' + ( i + 1 ) + '</span></a></li>';
+            }
+
+            $bullets = $( '<ul class="product-bullets">' + list + '</ul>' ).on('click touchstart', 'a', function() {
+                var index = $(this).data('index');
+
+                $.fancybox.getInstance(function() {
+                    this.jumpTo( index );
+                });
+
+            });
+
+            instance.$refs.bullets = $bullets.appendTo( instance.$refs.stage );
+
+        },
+        beforeShow : function( instance ) {
+
+            // Mark current bullet navigation link as active
+            instance.$refs.stage.find('ul:first')
+                .children()
+                .removeClass('active')
+                .eq( instance.currIndex )
+                .addClass('active');
+
+        },
+        afterClose: function(instance, current) {
+
+            // Move form back to the place
+            instance.$refs.form.appendTo( current.opts.$orig.parent() );
+
+        }
+    });
+</script>
+</body>
+</html>
