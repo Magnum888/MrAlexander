@@ -1,7 +1,7 @@
 <?php ignore_user_abort(true); error_reporting(0);
 
 /***************************************************************************
- *                              Настройки                                  *
+ *                              Setings                                 *
  ***************************************************************************/
 
 const NOTIFICATIONS_EMAIL = "";
@@ -10,68 +10,54 @@ const TELEGRAM_CHAT_ID = "";
 
 
 /***************************************************************************
- *                                Логика                                   *
+ *                                Logic                                   *
  ***************************************************************************/
 
-// Получаем данные из формы
 $input = getInput();
-
-// Если превышен суммарный максимальный размер всех полей формы (вместе с файлами), показываем страницу с ошибкой
-// и просим заполнить форму еще раз
 if (empty($input["text"]) && empty($input["files"]) && (int)$_SERVER['CONTENT_LENGTH'] > 512 * 1024) {
     showPostExceededError();
 }
 
-// Разбираем полученные файлы
 $files = getFiles($input);
-
-// Если есть файлы, превышающие максимальный разрешенный размер - показываем страницу с ошибкой
-// и просим заполнить форму еще раз
 $bigFiles = getBigFiles($files);
+
 if (count($bigFiles) != 0) {
     showBigFilesError($input, $bigFiles);
 }
 
-// Если есть ошибки (серверные) при загрузке файлов, пишем об этом в логи
 $errorFiles = getErrorFiles($files);
 if (count($errorFiles) != 0) {
     foreach ($errorFiles as $file) {
         error_log("Fail to upload file {$file["name"]}. Error code: {$file["error"]}", 0);
     }
 }
-
-// Получаем список успешно загруженных файлов
 $goodFiles = getGoodFiles($files);
-
-// Создаем новый ID для заявки. Это поможет идентифицировать апселлы
 $leadId = time();
-
-// Если указан email для уведомлений - отправляем письмо
 if (defined("NOTIFICATIONS_EMAIL") && NOTIFICATIONS_EMAIL != "") {
     $emailSent = sendEmail($input, $leadId, $errorFiles, $goodFiles);
 }
 
-// Если указаны данные для Telegram бота - шлем лид в Telegram
+// TELEGRAM BOT
 if (defined("TELEGRAM_TOKEN") && TELEGRAM_TOKEN != "" && defined("TELEGRAM_CHAT_ID") && TELEGRAM_CHAT_ID != "") {
     $telegramSent = sendTelegram($input, $leadId, $errorFiles, $goodFiles);
 }
 
-// Если заявка не отправилась ни на Email, ни в Telegram - показываем посетителю ошибку отправки формы
+// EMAIL
 if (!$emailSent && !$telegramSent) {
     showFormError();
 }
 
-// Если указан URL редиректа - делаем редирект
+// Redirect
 if ($input["text"]["redirect"]) {
     redirect($input, $leadId);
 }
 
-// Если редирект не настроен - показываем стандартную страницу благодарности
+// If redirect empty
 showDefaultThankyouPage($input);
 
 
 /***************************************************************************
- *                               Функции                                   *
+ *                               FUNCTION                                 *
  ***************************************************************************/
 
 function httpRequest($url, $method = "GET", $headers = [], $data = NULL)
