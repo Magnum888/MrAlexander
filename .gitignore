@@ -1,0 +1,9 @@
+*.txt
+/node_modules/
+node_modules/
+/.git/
+old/
+.mail.php
+.contact.php
+.idea
+/.idea/*
