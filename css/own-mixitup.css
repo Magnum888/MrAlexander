@@ -1,8 +1,4 @@
-
-/* Filter-list
----------------------------------------------------------------------- */
-
-/** page structure **/
+/* page structure */
   #filter-list {
     display: block;
     width: 100%;
@@ -18,9 +14,6 @@
     margin-right: 15px;
     font-size: 1.2em;
     cursor: pointer;
-      /*-webkit-border-radius: 3px;
-      -moz-border-radius: 3px;*/
-      /*border-radius: 3px;*/
     border-bottom: 1px solid rgba(255, 255, 255, 0);
   }
   #filter-list li:hover {
@@ -30,8 +23,7 @@
     font-weight: bold;
     border-color: #000;
   }
-/* Portfolio
----------------------------------------------------------------------- */
+/* Portfolio */
 #portfolio {
     padding: 0;
     /* text-align: justify; */
@@ -42,8 +34,7 @@
     display: inline-block;
     width: 100%;
 }
-/* Target Elements
----------------------------------------------------------------------- */
+/* Target Elements */
 .mix,
 .gap {
     display: inline-block;
@@ -60,7 +51,7 @@
 	font-size: 30px;
 	text-align: center;
 	width: 207px;
-	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 #portfolio .mix h2 {
     font-size: 32px;
@@ -76,7 +67,7 @@
 	color: #fff;
 	font-size: 30px;
 	text-align: center;
-	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 #portfolio .mix a {
     display: inline-block;
@@ -88,18 +79,15 @@
 #portfolio .mix img {
     max-width: 100%;
 }
-/* Grid Breakpoints
----------------------------------------------------------------------- */
 
+/* Grid Breakpoints */
 /* 2 Columns */
-
 .mix,
 .gap {
     width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
 }
 
 /* 3 Columns */
-
 @media screen and (min-width: 541px) {
     .mix,
     .gap {
@@ -108,7 +96,6 @@
 }
 
 /* 4 Columns */
-
 @media screen and (min-width: 961px) {
     .mix,
     .gap {
@@ -121,8 +108,8 @@
         width: calc(100%/4 - (((4 - 1) * 1rem) / 4));
     }
 }
-/* 5 Columns */
 
+/* 5 Columns */
 @media screen and (min-width: 1190px) {
     .mix{
         width: calc(100%/5 - (((4 - 1) * 1rem) / 5));
