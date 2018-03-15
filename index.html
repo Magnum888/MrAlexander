@@ -15,7 +15,7 @@
     <body>
 
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
+            <div class="container top-navigation">
                 <div class="row">
                 <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -38,6 +38,7 @@
                             <li><a class="color_animation" href="#featured">КОМАНДА</a></li>
                             <li><a class="color_animation" href="#reservation">РЕЗЕРВУВАННЯ</a></li>
                             <li><a class="color_animation" href="#contact">КОНТАКТИ</a></li>
+                            <li><a class="color_animation" href="#cart"><img id="cart" src="images/shopping-cart.svg" alt="cart"></a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div>
@@ -86,7 +87,7 @@
             <div class="text-content container"> 
                 <div class="container">
                     <div class="row">
-                        <div id="w">
+                        <div>
                             <ul id="filter-list" class="clearfix">
                                 <li class="filter" data-filter="all">Всі</li>
                                 <li class="filter" data-filter=".breakfast">Сніданки</li>
@@ -95,105 +96,103 @@
                                 <li class="filter" data-filter=".dinner">Гарніри</li>
                             </ul><!-- @end #filter-list -->    
                             <ul id="portfolio">
-                                <li class="mix breakfast">
-                                    <!-- <a class="inline" href="#inline_content"> -->
-                                        <img src="images/mini_breakfast1.jpg" alt="Food">
-                                    <!-- </a> -->
+                                <li class="mix breakfast" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="breakfast1">
+                                    <img src="images/mini_breakfast1.jpg" alt="Food">
                                     <h2 class="white">&#8372 70</h2>
                                 </li>
-                                <li class="mix dinner breakfast">
+                                <li class="mix dinner breakfast" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="breakfast2">
                                     <img src="images/mini_breakfast2.jpg" alt="Food" >
                                     <h2 class="white">&#8372 65</h2>
                                 </li>
-                                <li class="mix dinner breakfast">
+                                <li class="mix dinner breakfast" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="breakfast3">
                                     <img src="images/mini_breakfast3.jpg" alt="Food" >
                                     <h2 class="white">&#8372 88</h2>
                                 </li>
-                                <li class="mix dinner breakfast">
+                                <li class="mix dinner breakfast" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="breakfast4">
                                     <img src="images/mini_breakfast4.jpg" alt="Food" >
                                     <h2 class="white">&#8372 91</h2>
                                 </li>
-                                <li class="mix dinner breakfast">
+                                <li class="mix dinner breakfast" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="breakfast5">
                                     <img src="images/mini_breakfast5.jpg" alt="Food" >
                                     <h2 class="white">&#8372 74</h2>
                                 </li>
-                                <li class="mix breakfast">
+                                <li class="mix breakfast" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="breakfast6">
                                     <img src="images/mini_breakfast6.jpg" alt="Food" >
                                     <h2 class="white">&#8372 92</h2>
                                 </li>
-                                <li class="mix desert">
+                                <li class="mix desert" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="desert1">
                                     <img src="images/mini_desert1.jpg" alt="Food" >
                                     <h2 class="white">&#8372 64</h2>
                                 </li>
-                                <li class="mix desert">
+                                <li class="mix desert" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="desert2">
                                     <img src="images/mini_desert2.jpg" alt="Food" >
                                     <h2 class="white">&#8372 71</h2>
                                 </li>
-                                <li class="mix desert">
+                                <li class="mix desert" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="desert3">
                                     <img src="images/mini_desert3.jpg" alt="Food" >
                                     <h2 class="white">&#8372 69</h2>
                                 </li>
-                                <li class="mix desert">
+                                <li class="mix desert" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="desert4">
                                     <img src="images/mini_desert4.jpg" alt="Food" >
                                     <h2 class="white">&#8372 59</h2>
                                 </li>
-                                <li class="mix desert">
+                                <li class="mix desert" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="desert5">
                                     <img src="images/mini_desert5.jpg" alt="Food" >
                                     <h2 class="white">&#8372 68</h2>
                                 </li>
-                                <li class="mix desert">
+                                <li class="mix desert" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="desert6">
                                     <img src="images/mini_desert6.jpg" alt="Food" >
                                     <h2 class="white">&#8372 83</h2>
                                 </li>
-                                <li class="mix special">
+                                <li class="mix special" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="special1">
                                     <img src="images/mini_special1.jpg" alt="Food" >
                                     <h2 class="white">&#8372 88</h2>
                                 </li>
-                                <li class="mix special">
+                                <li class="mix special" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="special2">
                                     <img src="images/mini_special2.jpg" alt="Food" >
                                     <h2 class="white">&#8372 78</h2>
                                 </li>
-                                <li class="mix special">
+                                <li class="mix special" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="special3">
                                     <img src="images/mini_special3.jpg" alt="Food" >
                                     <h2 class="white">&#8372 66</h2>
                                 </li>
-                                <li class="mix special">
+                                <li class="mix special" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="special4">
                                     <img src="images/mini_special4.jpg" alt="Food" >
                                     <h2 class="white">&#8372 92</h2>
                                 </li>
-                                <li class="mix special">
+                                <li class="mix special" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="special5">
                                     <img src="images/mini_special5.jpg" alt="Food" >
                                     <h2 class="white">&#8372 77</h2>
                                 </li>
-                                <li class="mix special">
+                                <li class="mix special" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="special6">
                                     <img src="images/mini_special6.jpg" alt="Food" >
                                     <h2 class="white">&#8372 75</h2>
                                 </li>
-                                <li class="mix dinner">
+                                <li class="mix dinner" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="dinner1">
                                     <img src="images/mini_dinner1.jpg" alt="Food" >
                                     <h2 class="white">&#8372 128</h2>
                                 </li>
-                                <li class="mix dinner">
+                                <li class="mix dinner" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="dinner2">
                                     <img src="images/mini_dinner2.jpg" alt="Food" >
                                     <h2 class="white">&#8372 118</h2>
                                 </li>
-                                <li class="mix dinner">
+                                <li class="mix dinner" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="dinner3">
                                     <img src="images/mini_dinner3.jpg" alt="Food" >
                                     <h2 class="white">&#8372 148</h2>
                                 </li>
-                                <li class="mix dinner">
+                                <li class="mix dinner" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="dinner4">
                                     <img src="images/mini_dinner4.jpg" alt="Food" >
                                     <h2 class="white">&#8372 155</h2>
                                 </li>
-                                <li class="mix dinner">
+                                <li class="mix dinner" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="dinner5">
                                     <img src="images/mini_dinner5.jpg" alt="Food" >
                                     <h2 class="white">&#8372 161</h2>
                                 </li>
-                                <li class="mix dinner">
+                                <li class="mix dinner" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="dinner6">
                                     <img src="images/mini_dinner6.jpg" alt="Food" >
                                     <h2 class="white">&#8372 134</h2>
                                 </li>
-                                <li class="mix dinner">
+                                <li class="mix dinner" data-fancybox data-animation-duration="700" data-src="#animatedModal" data-idcardmenu="dinner7">
                                     <img src="images/mini_dinner7.jpg" alt="Food" >
                                     <h2 class="white">&#8372 99</h2>
                                 </li>
@@ -201,6 +200,7 @@
                                 <li class="gap"></li>
                             </ul><!-- @end #portfolio -->
                         </div><!-- @end #w -->
+                        <div style="display: none;" id="animatedModal" class="animated-modal"></div>
                     </div>
                 </div>
             </div>  
@@ -318,7 +318,7 @@
                             <!-- Left Inputs -->
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-8 col-md-6 col-xs-12">
+                                    <div class="col-lg-8 col-md-8 col-xs-12">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-xs-6">
                                                 <!-- Name -->
@@ -333,7 +333,7 @@
                                                 <input type="tel" name="phone" id="phone" required="required" class="form" minlength="10" maxlength="10" pattern="[0-9]{10}" placeholder="Телефон у форматі 09XXXXXXXX" /><span class="validity"></span>
                                                 <input type="number" name="guest" id="guest" required="required" class="form" placeholder="Кількість осіб" step="1" min="1" max="10"/><span class="validity"></span>
                                                 <input type="email" name="email" id="email-res" required="required" class="form" placeholder="Email" /><span class="validity"></span>
-                                                <input type="text" name="subject" id="subject" class="form" placeholder="Повідомлення" />
+                                                <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Повідомлення" /><span class="validity"></span>
                                             </div>
 
                                             <div class="col-xs-6 ">
@@ -344,7 +344,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="col-lg-4 col-md-6 col-xs-12">
+                                    <div class="col-lg-4 col-md-4 col-xs-12">
                                         <!-- Message -->
                                         <div class="right-text">
                                             <h2>Робочі годинни</h2><hr class="line-hour">
@@ -371,12 +371,12 @@
         <section class="social_connect">
             <div class="text-content container"> 
                 <div class="col-md-6">
-                    <span class="social_heading">FOLLOW</span>
+                    <span class="social_heading">FOLLOW US</span>
                     <ul class="social_icons">
-                        <li><a class="icon-twitter color_animation" href="https://twitter.com/" target="_blank"></a></li>
-                        <li><a class="icon-github color_animation" href="https://github.com/" target="_blank"></a></li>
-                        <li><a class="icon-linkedin color_animation" href="https://www.linkedin.com/" target="_blank"></a></li>
-                        <li><a class="icon-mail color_animation" href="kovel.web@yahoo.com"></a></li>
+                        <li><a href="https://twitter.com/" target="_blank"><img class="img-social" src="images/twitter.svg" alt="twitter"></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank"><img class="img-social" src="images/facebook.svg" alt="facebook"></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><img class="img-social" src="images/instagram.svg" alt="instagram"></a></li>
+                        <li><a href="kovel.web@yahoo.com"><img class="img-social" src="images/email.svg" alt="email"></a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -419,37 +419,40 @@
                 </div>
             </div>
         </section>
-        <div style='display:none'>
-                <div id='inline_content' style='padding:10px; background:#fff;'>
-                <p><strong>This content comes from a hidden element on this page.</strong></p>
-                <p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
-                <p><a id="click" href="#" style='padding:5px; background:#ccc;'>Click me, it will be preserved!</a></p>
-                
-                <p><strong>If you try to open a new Colorbox while it is already open, it will update itself with the new content.</strong></p>
-                <p>Updating Content Example:<br />
-                <a class="ajax" href="../content/ajax.html">Click here to load new content</a></p>
-                </div>
-            </div>
+        
         <!-- ============ Footer Section  ============= -->
 
         <footer class="sub_footer">
             <div class="container">
-                <div class="col-md-4"><p class="sub-footer-text text-center">&copy; Mr. Alexander 2018</p></div>
-                <div class="col-md-4"><p class="sub-footer-text text-center">Back to <a href="#top">TOP</a></p>
+                <div class="col-md-4">
+                    <p class="sub-footer-text text-center">&copy; Mr. Alexander 2018
+                        <img class="svg-footer" src="images/dinner-footer.svg" alt="dinner-footer">
+                    </p>
                 </div>
-                <div class="col-md-4"><p class="sub-footer-text text-center">Розробка <a href="#" target="_blank">AlexanderWEB</a></p></div>
+                <div class="col-md-4">
+                    <p class="sub-footer-text text-center">Back to
+                        <a href="#top">
+                            <img class="svg-footer" src="images/upwards-arrow.svg" alt="arrow-top">
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p class="sub-footer-text text-center">Розробка
+                        <a href="#" target="_blank">Alexander K.</a>
+                    </p>
+                </div>
             </div>
         </footer>
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!-- <link rel="stylesheet" href="css/style-portfolio.css"> -->
         <link rel="stylesheet" href="css/style-mixitup.css">
-        <link rel="stylesheet" href="css/picto-foundry-food.css" />
+        <!-- <link rel="stylesheet" href="css/picto-foundry-food.css" /> -->
         <link rel="stylesheet" href="css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/owl.theme.default.min.css">
         <link rel="stylesheet" href="css/jquery-ui.css">
         <link rel="stylesheet" href="css/colorbox.css">
-        <!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css"> -->
+        <link rel="stylesheet" href="css/jquery.fancybox.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script> 
         <!-- <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> -->
@@ -463,11 +466,11 @@
         <script type="text/javascript" src="js/forms.js"></script>
         <script type="text/javascript" src="js/owl.carousel.min.js"></script>
         <script type="text/javascript" src="js/main.js" ></script>
-        <!-- <script type="text/javascript" src="js/jquery.fancybox.min.js"></script> -->
-        <script>
+        <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+        <!-- <script>
             $(document).ready(function(){
                 $(".inline").colorbox({inline:true, width: "50%"});
             })
-        </script>
+        </script> -->
     </body>
 </html>
