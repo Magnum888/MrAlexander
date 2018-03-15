@@ -1,14 +1,12 @@
 <?php ignore_user_abort(true); error_reporting(0);
 
-// Описание на https://blog.biscripter.ru/landing-forms/
-//https://api.telegram.org/bot454528987:AAEWx30GKclkJroSe412WwwYLcFZqeQCoks/sendMessage?chat_id=-274016090&text=hello!
 /***************************************************************************
  *                              Настройки                                  *
  ***************************************************************************/
 
-const NOTIFICATIONS_EMAIL = "kovel.web@yahoo.com";
-const TELEGRAM_TOKEN = "454528987:AAEWx30GKclkJroSe412WwwYLcFZqeQCoks";
-const TELEGRAM_CHAT_ID = "-274016090";
+const NOTIFICATIONS_EMAIL = "";
+const TELEGRAM_TOKEN = "";
+const TELEGRAM_CHAT_ID = "";
 
 
 /***************************************************************************
