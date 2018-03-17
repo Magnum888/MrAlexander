@@ -58,24 +58,6 @@
 				currentLink.removeClass("navactive");
 			}
 		});
-
-        //   $(function() {
-        //     $( "#datepicker" ).datepicker();
-        // });
-    
     };
-    
-    // $(document).ready(function () {
-    //     $("#contact-us").submit(function () {
-    //         $.ajax({
-    //             type: "POST",
-    //             url: "contact.php",
-    //             data: $(this).serialize()
-    //         }).done(function () {
-    //             alert("Дякуємо за повідомлення");
-    //         });
-    //         return alert("no");
-    //     });
-    // });
 
 
