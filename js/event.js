@@ -121,7 +121,7 @@ function showOneCard(e) {
     var div = document.createElement('div');
     div.innerHTML = `
             <img class="img-responsive" src="images/${elemImg}.jpg">
-            <p class="modal-menu-title">${menu[elemImg].title}</p>
+            <p class="modal-menu-title pacifico">${menu[elemImg].title}</p>
             <p class="modal-menu-description">${menu[elemImg].description}</p>`;
     document.getElementById('animatedModal').appendChild(div);
 }

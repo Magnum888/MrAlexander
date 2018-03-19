@@ -69,7 +69,9 @@ h1, h2, p, span, a {
     margin: 0;
     padding: 0;
 }
-
+.pacifico{
+    font-family: 'Pacifico', cursive;
+}
 .limit {
     max-width: 1200px;
     width: 100%;
@@ -171,9 +173,10 @@ INTRO CONTAINER
     font-size: 30px; 
     font-style: italic; 
     text-transform: capitalize;
+    color: #fdbd1f;
 }
 
-.white{
+.black{
     color: #333333;
 }
 
@@ -268,6 +271,9 @@ h1 {
     border: 8px solid #2f2e2f;
     display: inline-block;
     padding: 7px 16px;
+    margin: 0;
+}
+.description_content h2{
     margin: 0;
 }
 /*========================
