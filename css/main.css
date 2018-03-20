@@ -131,6 +131,7 @@ li{
 .navbar-nav>li:last-child a{
     padding-top: 10px;
     padding-bottom: 10px;
+    outline: none;
 }
 .container.top-navigation{
     margin-right: 10px;
@@ -388,14 +389,28 @@ STYLES FOR ANIMATED MODAL
     background-position: center;
     background-attachment: fixed;
 }
-p.modal-menu-title{
+.modal-menu-title{
     color: #fdbd1f;
     font-size: 25px;
     text-align: center;
     margin: 5px 0 5px 0;
 }
-p.modal-menu-description{
+.modal-menu-description{
     font-weight: 600;
+}
+.modal-menu-price{
+    font-size: 25px;
+    line-height: 35px;
+}
+button.btn-order.btn.btn-warning:focus{
+    outline: none;
+}
+  /* Modal CART */
+.svg-modal-cart{
+    width: 40px;
+}
+.title-modal-cart{
+    font-size: 18px;
 }
 /*========================
 FIRST FOOTER CONTENT

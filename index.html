@@ -34,7 +34,7 @@
                             <li><a class="color_animation" href="#team">КОМАНДА</a></li>
                             <li><a class="color_animation" href="#reservation">РЕЗЕРВУВАННЯ</a></li>
                             <li><a class="color_animation" href="#contact">КОНТАКТИ</a></li>
-                            <li><a class="color_animation" href="#cart"><img id="cart" src="images/shopping-cart.svg" alt="cart"></a></li>
+                            <li><a class="color_animation" href=""><img id="cart" src="images/shopping-cart.svg" alt="cart" data-fancybox data-animation-duration="700" data-src="#animated-Modal"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -198,7 +198,23 @@
                 </div>
             </div>  
         </section>
-
+        
+        <section id="cart">
+            <div style="display: none;" id="animated-Modal" class="animated-modal">
+                <div class="title-modal-cart">
+                    <img src="images/modal-cart.svg" alt="modal-cart" class="svg-modal-cart"> Товарів у корзині:
+                </div>
+                <hr>
+                <div class="prodacts-modal-cart"></div>
+                <hr>
+                <div class="total-modal-cart">Сума замовлення: <span class="sum-modal-cart">5</span>грн.</div>
+                <div>Доставка: 25 грн.</div>
+                <hr>
+                <div>До сплати: </div>
+                <hr>
+                <button type="button" class="btn-order btn btn-warning">Оформити замовлення</button>
+            </div>
+        </section>
         <!-- ============ Our Drinks  ============= -->
 
 
